@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozinhando e Pensando</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Áudio do jogo-->
+  <audio id="backgroundMusic" src="audio/tarantella.mp3" loop></audio>
+  <audio id="audioAplausos" src="audio/aplausos.mp3"></audio>
+  <audio id="audioErro" src="audio/erro.mp3"></audio>
+  
+
+  <!-- Tela inicial -->
+  <div id="introScreen" class="screen">
+
+    <button id="startBtn">Iniciar</button>
+  </div>
+
+  <!-- 2. Tela de explicação do jogo -->
+  <div id="explanationScreen" class="screen" style="display: none;">
+    <button id="nextBtn1">Next</button>
+  </div>
+
+  <!-- Tela do Misto Quente -->
+  <div id="gameScreen1" class="screen" style="display: none;">
+    <h1>Prepare um Misto Quente!</h1>
+    <div class="game-stage">
+      <div class="ingredients" id="ingredientesMistoQuente">
+        <img src="imagens/misto_quente/pao.jpg" alt="Pão" id="pao" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/misto_quente/queijo.jpg" alt="Queijo" id="queijo" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/misto_quente/presunto.jpg" alt="Presunto" id="presunto" draggable="true" ondragstart="drag(event)">
+      </div>
+      <div class="dropzones">
+        <div id="drop1" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="drop2" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="drop3" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      </div>
+    </div>
+    <button id="checkBtn1">Verificar</button>
+    <button id="nextBtn2" style="display: none;">Next</button>
+  </div>
+
+  <!-- 4. Tela do Omelete -->
+  <div id="gameScreen2" class="screen" style="display: none;">
+    <h1>Prepare um Omelete!</h1>
+    <div class="game-stage">
+      <div class="ingredients" id="ingredientesOmelete">
+        <img src="imagens/omelete/virar omelete.jpg" alt="Virar Omelete" id="virarOmelete" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/omelete/mexer os ovos.jpg" alt="Mexer os Ovos" id="mexerOvos" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/omelete/despejar os ovos na frigideira.jpg" alt="Despejar na Frigideira" id="despejarOvos"
+          draggable="true" ondragstart="drag(event)">
+        <img src="imagens/omelete/aquecer a frigideira.jpg" alt="Aquecer Frigideira" id="aquecerFrigideira"
+          draggable="true" ondragstart="drag(event)">
+      </div>
+      <div class="dropzones">
+        <div id="dropOmelete1" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropOmelete2" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropOmelete3" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropOmelete4" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      </div>
+    </div>
+    <button id="checkBtn2">Verificar</button>
+    <button id="nextBtn3" style="display: none;">Next</button>
+  </div>
+
+  <!-- 5. Tela da Macarronada-->
+
+  <div id="gameScreen3" class="screen" style="display: none;">
+    <h1>Prepare uma Macarronada!</h1>
+    <div class="game-stage">
+      <div class="ingredients" id="ingredientesMacarronada">
+        <img src="imagens/Macarronada/Ferver a água.jpg" alt="Ferver a água" id="ferverAgua" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/Macarronada/fazer molho de tomate.jpg" alt="Molho de Tomate" id="molho" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/Macarronada/cozinhar macarrão.jpg" alt="Cozinhar macarrão" id="cozinharMacarrao"
+          draggable="true" ondragstart="drag(event)">
+        <img src="imagens/Macarronada/misturar macarrão ao molho.jpg" alt="Misturar Macarrão ao Molho"
+          id="misturaMacarrao" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/Macarronada/macarrao na escorredeira.jpg" alt="Escorrer Macarrão" id="escorrerMacarrao"
+          draggable="true" ondragstart="drag(event)">
+      </div>
+      <div class="dropzones">
+        <div id="dropMacarronada01" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropMacarronada02" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropMacarronada03" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropMacarronada04" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropMacarronada05" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      </div>
+    </div>
+    <button id="checkBtn3">Verificar</button>
+    <button id="nextBtn4" style="display: none;">Next</button>
+  </div>
+
+  <!-- Tela do bolo-->
+
+  <div id="gameScreen4" class="screen" style="display: none;">
+    <h1>Prepare um delicioso Bolo!</h1>
+    <div class="game-stage">
+      <div class="ingredients" id="ingredientesBolo">
+        <img src="imagens/bolo_de_chocolate/despejar a massa na forma.jpg" alt="Despejar a massa na forma"
+          id="despejarMassa" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/bolo_de_chocolate/levar bolo ao forno.jpg" alt="Levar bolo ao forno" id="boloForno"
+          draggable="true" ondragstart="drag(event)">
+        <img src="imagens/bolo_de_chocolate/misturar os ingredientes.jpg" alt="Misturar ingredientes"
+          id="misturaIngredientes" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/bolo_de_chocolate/servir o bolo.jpg" alt="Servir o bolo" id="servirBolo" draggable="true" ondragstart="drag(event)">
+        <img src="imagens/bolo_de_chocolate/untar a forma.jpg" alt="Untar Forma" id="untarForma" draggable="true" ondragstart="drag(event)">
+      </div>
+      <div class="dropzones">
+        <div id="dropBolo01" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropBolo02" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropBolo03" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropBolo04" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+        <div id="dropBolo05" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      </div>
+    </div>
+    <button id="checkBtn4">Verificar</button>
+    <button id="nextBtn5" style="display: none;">Next</button>
+  </div>
+
+  <!-- Tela de Parabéns -->
+  <div id="gameScreen5" class="screen" style="display: none;">
+    <button id="nextBtn6">Next</button>
+  </div>
+
+  <!-- Tela de créditos -->
+  <div id="gameScreen6" class="screen" style="display: none;">
+    <button id="nextBtn7">Next</button>
+  </div>
+
+ <!-- Tela de créditos -->
+ <div id="gameScreen7" class="screen" style="display: none;">
+  <button id="reiniciarBtn">Reiniciar Game</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

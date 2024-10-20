@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+/* Tela Inicial / tela01 */
+#introScreen {
+  display: block; /* Mostra a tela inicial por padrão */
+  background-image: url('imagens/backgrounds/tela01.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Faz com que o background ocupe a tela toda */
+}
+
+#startBtn{
+  position: absolute;
+  top: 760px;
+  left: 1135px;
+}
+
+/* Tela de explicação / tela02 */
+#explanationScreen{
+  display: none;
+  background-image: url('imagens/backgrounds/tela02.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela do Misto quente / tela03 */
+#gameScreen1{
+  display: none;
+  background-image: url('imagens/backgrounds/tela03.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela do Omelete / tela04 */
+#gameScreen2{
+  display: none;
+  background-image: url('imagens/backgrounds/tela04.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela da Macarronada / tela05 */
+#gameScreen3{
+  display: none;
+  background-image: url('imagens/backgrounds/tela05.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela do bolo / tela06 */
+#gameScreen4{
+  display: none;
+  background-image: url('imagens/backgrounds/tela06.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela de parabéns / tela07 */
+#gameScreen5{
+  display: none;
+  background-image: url('imagens/backgrounds/tela07.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela de créditos / tela08 */
+#gameScreen6{
+  display: none;
+  background-image: url('imagens/backgrounds/tela08.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Tela Final / tela09 */
+#gameScreen7{
+  display: none;
+  background-image: url('imagens/backgrounds/tela09.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.game-stage {
+  margin-top: 20px;
+}
+
+.ingredients img {
+  width: 100px;
+  margin: 10px;
+}
+
+.dropzones {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dropzone {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #333;
+  margin: 10px;
+  display: inline-block;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#nextBtn1, #nextBtn2, #nextBtn3, #nextBtn4, #nextBtn5, #nextBtn6, #nextBtn7 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
